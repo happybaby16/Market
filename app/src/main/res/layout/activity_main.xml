@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5pt"
+
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="20pt"
+        android:layout_height="20pt"
+        android:background="@drawable/roundshapebtn"
+
+
+        android:backgroundTint="@color/mainGrey"
+        android:src="@drawable/ic_baseline_menu_24" />
+
+    <TextView
+        android:id="@+id/shopBagTextView"
+        android:layout_width="35pt"
+        android:layout_height="20pt"
+        android:text="Корзина:"
+        android:gravity="center"
+        android:layout_toLeftOf="@id/sumTextView"
+        android:layout_marginLeft="10pt"
+        />
+
+
+    <TextView
+        android:id="@+id/sumTextView"
+        android:layout_width="20pt"
+        android:layout_height="20pt"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:text="{Sum}" />
+
+    <LinearLayout
+        android:id="@+id/lineProductsContener"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu"
+        android:orientation="vertical"
+        android:paddingTop="5pt">
+
+
+        <LinearLayout
+            android:id="@+id/lineProduct"
+            android:layout_width="match_parent"
+            android:layout_height="35pt"
+            android:background="@drawable/roundshapebtn"
+            android:backgroundTint="@color/mainGrey"
+            android:orientation="horizontal"
+            android:padding="5pt"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageProductImageView"
+                android:layout_width="25pt"
+                android:layout_height="25pt"
+                android:layout_gravity="left"
+                android:background="@drawable/roundshapebtn"
+                android:backgroundTint="@color/white" />
+
+            <TextView
+                android:id="@+id/nameProductTextView"
+                android:layout_width="90pt"
+                android:layout_height="25pt"
+                android:gravity="center_vertical"
+                android:paddingLeft="10pt"
+                android:text="{Name}"
+                android:textColor="@color/white"
+                android:textSize="5pt"
+
+                />
+
+            <TextView
+                android:id="@+id/priceProductTextView"
+                android:layout_width="match_parent"
+                android:layout_height="25pt"
+                android:gravity="center_vertical"
+                android:paddingLeft="10pt"
+                android:text="{Price}"
+                android:textColor="@color/white"
+                android:textSize="5pt"
+
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
